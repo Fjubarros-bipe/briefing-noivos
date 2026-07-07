@@ -212,7 +212,8 @@
     var form = document.querySelector('form');
     var vals = [].slice.call(form.querySelectorAll('input, textarea')).map(function (el) {
       var label = el.closest('label');
-      var q = label ? label.querySelector('span').textContent.trim() : '';
+      var spanEl = label ? label.querySelector('span') : null;
+      var q = spanEl ? spanEl.textContent.trim() : '';
       return el.value ? (q + ': ' + el.value) : null;
     }).filter(Boolean);
 
