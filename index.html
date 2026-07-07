@@ -205,9 +205,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  emailjs.init('GbYRcA6o0GH0W-ph7');
-
   document.getElementById('btnEnviar').addEventListener('click', async function () {
+    emailjs.init('GbYRcA6o0GH0W-ph7');
     var btn = document.getElementById('btnEnviar');
     var form = document.querySelector('form');
     var vals = [].slice.call(form.querySelectorAll('input, textarea')).map(function (el) {
